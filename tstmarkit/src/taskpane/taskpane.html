@@ -1,0 +1,73 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoso Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="20" height="20" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
+        <h2 class="ms-font-su">Markit Outlook Solution</h2>
+    </header>
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2>
+    </section>
+   
+        <main id="app-body" class="ms-welcome__main" style="display: none;">          
+            <div class="container">  
+               
+                <div class="form-group">
+                    <label  for="email">Email Subject</label>
+                   
+                        <p><label id="item-subject"></label></p> 
+              
+                  </div>          
+                     <div class="form-group">
+                    <label  for="email">Metadata 1</label>
+                  
+                      <input type="email" class="form-control" id="email" placeholder="Enter Metadata1" name="email">
+                 
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">MetaData 2</label>
+                    <select  class="form-control"id='countriesDropDown'> </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Email</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>  
+                  <div class="form-group">        
+                    <div role="button" id="run" class="btn btn-default">
+                        <span class="ms-Button-label">Save</span>
+                    </div>   
+                    <p><label id="reponseid"></label></p>  
+                  </div>    
+                 
+              </div>                      
+        
+            
+          
+        </main>
+
+</body>
+
+</html>
